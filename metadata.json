@@ -1,0 +1,6 @@
+{
+  "name": "Slayer's Chronicle",
+  "description": "The ultimate Demon Slayer Corps and Twelve Kizuki compendium, featuring all 9 Hashiras, Upper and Lower Moons, Demon King Muzan, breathing style genealogies, combat footage, and tactical dossiers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

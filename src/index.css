@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --surface: #0F0F0F;
+    --surface-dim: #0B0B0B;
+    --surface-bright: #262626;
+    --surface-container-lowest: #080808;
+    --surface-container-low: #141414;
+    --surface-container: #1A1A1A;
+    --surface-container-high: #242424;
+    --surface-container-highest: #2E2E2E;
+    --on-surface: #F5F5F5;
+    --on-surface-variant: #C5A48A;
+    --inverse-surface: #F5F5F5;
+    --inverse-on-surface: #141414;
+    --outline: rgba(255, 255, 255, 0.15);
+    --outline-variant: rgba(197, 164, 138, 0.3);
+    --surface-tint: #C5A48A;
+    --primary: #C5A48A;
+    --on-primary: #0F0F0F;
+    --primary-container: #C5A48A;
+    --on-primary-container: #0F0F0F;
+    --inverse-primary: #8E684C;
+    --secondary: #9ECFD1;
+    --on-secondary: #003739;
+    --secondary-container: #1A4E50;
+    --on-secondary-container: #8DBEC0;
+    --tertiary: #D4B8A0;
+    --on-tertiary: #1C120C;
+    --tertiary-container: #4A3B2F;
+    --on-tertiary-container: #E5D3C5;
+    --error: #FFB4AB;
+    --on-error: #690005;
+    --error-container: #93000A;
+    --on-error-container: #FFDAD6;
+    --primary-fixed: #E8D7C8;
+    --primary-fixed-dim: #C5A48A;
+    --on-primary-fixed: #2A1C12;
+    --on-primary-fixed-variant: #5B4032;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #0F0F0F;
+    color: #F5F5F5;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Editorial scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0F0F0F;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C5A48A;
+  }
+
+  .scrollbar-none::-webkit-scrollbar,
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none,
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Editorial Typography & Utility Classes */
+.font-serif-display {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-style: normal;
+  letter-spacing: -0.02em;
+}
+
+.font-serif-italic {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+}
+
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-display-hero {
+  font-family: 'Playfair Display', 'Cinzel', 'Oswald', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.font-headline-lg {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.font-headline-md {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.font-headline-sm {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.font-label-bold {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.font-body-lg {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.font-body-md {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Color helper utility classes for Editorial theme */
+.bg-surface { background-color: #0F0F0F; }
+.bg-surface-dim { background-color: #0B0B0B; }
+.bg-surface-bright { background-color: #262626; }
+.bg-surface-container-lowest { background-color: #080808; }
+.bg-surface-container-low { background-color: #141414; }
+.bg-surface-container { background-color: #1A1A1A; }
+.bg-surface-container-high { background-color: #242424; }
+.bg-surface-container-highest { background-color: #2E2E2E; }
+
+.bg-primary { background-color: #C5A48A; }
+.bg-primary-container { background-color: #C5A48A; }
+.bg-inverse-primary { background-color: #8E684C; }
+.bg-secondary { background-color: #9ECFD1; }
+.bg-secondary-container { background-color: #1A4E50; }
+.bg-secondary-fixed { background-color: #B9ECEE; }
+.bg-tertiary { background-color: #D4B8A0; }
+.bg-tertiary-container { background-color: #4A3B2F; }
+
+.text-surface { color: #0F0F0F; }
+.text-on-surface { color: #F5F5F5; }
+.text-on-surface-variant { color: #C5A48A; }
+.text-outline { color: rgba(255, 255, 255, 0.45); }
+.text-outline-variant { color: rgba(197, 164, 138, 0.6); }
+.text-primary { color: #C5A48A; }
+.text-on-primary { color: #0F0F0F; }
+.text-primary-container { color: #C5A48A; }
+.text-on-primary-container { color: #0F0F0F; }
+.text-inverse-primary { color: #8E684C; }
+.text-secondary { color: #9ECFD1; }
+.text-on-secondary { color: #003739; }
+.text-tertiary { color: #D4B8A0; }
+
+.border-primary { border-color: #C5A48A; }
+.border-primary-container { border-color: #C5A48A; }
+.border-inverse-primary { border-color: #8E684C; }
+.border-secondary { border-color: #9ECFD1; }
+.border-tertiary { border-color: #D4B8A0; }
+.border-outline { border-color: rgba(255, 255, 255, 0.15); }
+.border-surface-container-highest { border-color: rgba(255, 255, 255, 0.1); }
+
+/* Material symbols adjustments */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
